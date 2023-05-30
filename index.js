@@ -1,6 +1,7 @@
 const express = require('express')
 const Datastore = require('@seald-io/nedb')
 const app = express()
+const fetch = import('node-fetch')
 require('dotenv').config()
 
 const port = process.env.PORT || 3500
