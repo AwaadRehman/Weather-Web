@@ -3,8 +3,8 @@ const Datastore = require('@seald-io/nedb')
 const app = express()
 require('dotenv').config()
 
-console.log(process.env)
-app.listen(3500, () => console.log('Listening to port 3500'))
+const port = process.env.PORT || 3500
+app.listen(port, () => console.log(`Listening to port at ${port}`))
 app.use(express.static('public'))
 app.use(express.json())
 
